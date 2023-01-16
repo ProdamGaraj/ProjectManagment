@@ -26,7 +26,7 @@ namespace CarService.Controllers
 		[HttpGet("key")]
 		public IActionResult OpenCar()
 		{
-			var input = Client.GetAsync("Car").Result;
+			var input = Client.GetAsync("Key").Result;
 			string sound = input.Content.ReadAsStringAsync().Result;
 			return Ok(sound);
 		}
